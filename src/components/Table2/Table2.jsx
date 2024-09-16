@@ -13,9 +13,9 @@ function createData(name, trackingId, date, status) {
 }
 
 const rows = [
-  createData("Furnitures", 18908424, "2 March 2022", "Approved"),
-  createData("Cupboards ", 18908424, "2 March 2022", "Pending"),
-  createData("Parcel", 18908424, "2 March 2022", "Approved"),
+  createData("Furnitures", 18908424, "2 March 2022", "Delivered"),
+  createData("Cupboards ", 18908424, "2 March 2022", "Delivered"),
+  createData("Parcel", 18908424, "2 March 2022", "Delivered"),
   createData("Certificates", 18908421, "2 March 2022", "Delivered"),
 ];
 
@@ -43,9 +43,9 @@ const makeStyle=(status)=>{
   }
 }
 
-export default function BasicTable() {
+export default function BasicTable2() {
   return (
-      <div className="Table">
+      <div className="Table2">
       <h3>Recent Orders</h3>
         <TableContainer
           component={Paper}
