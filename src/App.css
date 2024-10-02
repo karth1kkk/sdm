@@ -20,6 +20,7 @@
     #006666 51.55%, /* Medium dark turquoise */
     #008080 90.85%  /* Turquoise */
   );
+
   height: 100vh;
   display: flex;
   align-items: center;

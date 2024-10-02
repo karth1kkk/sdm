@@ -15,9 +15,27 @@ import Account from './components/Account/Account';
 
 function App() {
   const location = useLocation(); // Get the current route location
+  let bgColor 
+
+      // Set the linear gradient background for specific paths
+      const gradientBackground = `linear-gradient(
+        106.37deg,
+        #add8e6 29.63%, /* Light Blue */
+        #87ceeb 51.55%, /* Sky Blue */
+        #4682b4 90.85%  /* Steel Blue */
+      )`;
+      
+  // Change background color for specific paths
+  if (location.pathname === "/user" || 
+      location.pathname === "/notifications" || 
+      location.pathname === "/chat" || 
+      location.pathname === "/orders" || 
+      location.pathname === "/account") {
+    bgColor = gradientBackground; // Set a different background color for these pages
+  }
 
   return (
-    <div className="App">
+    <div className="App" style={{ background: bgColor }}>
       <div className="AppGlass">
         <Sidebar />
         <Routes>
@@ -30,11 +48,10 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/orders" element={<Orders />} />
-          <Route path="/account" element={<Account/>} />
+          <Route path="/account" element={<Account />} />
         </Routes>
-        {/* Conditionally render RightSide if the path is "/" */}
+        {/* Conditionally render RightSide if the path is not "/user" */}
         {location.pathname !== "/user" && <RightSide />}
-
       </div>
     </div>
   );
@@ -49,4 +66,3 @@ function AppWrapper() {
 }
 
 export default AppWrapper;
-

@@ -6,7 +6,7 @@ import RightSide from "../RigtSide/RightSide";
 const User = () => {
   return (
     <div className="User">
-      <h1>Dashboard</h1>
+      <h1>Customer Dashboard</h1>
       <Cards />
       <Table />
     </div>
